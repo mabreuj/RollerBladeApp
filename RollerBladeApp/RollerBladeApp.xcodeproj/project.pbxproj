@@ -19,9 +19,13 @@
 		80495E681F2EE1B300851A24 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80495E671F2EE1B300851A24 /* LaunchViewController.swift */; };
 		80495E6B1F2EE64500851A24 /* InlineMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80495E6A1F2EE64500851A24 /* InlineMain.storyboard */; };
 		80495E6E1F2EFF7200851A24 /* Attributions.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 80495E6D1F2EFF7200851A24 /* Attributions.rtf */; };
+		FFF189DC89AFC668A6DBDB6A /* Pods_RollerBladeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1825A8FBA9F55802F6C9FA81 /* Pods_RollerBladeApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1825A8FBA9F55802F6C9FA81 /* Pods_RollerBladeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RollerBladeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2461D8B02A557AA814E2EFF6 /* Pods-RollerBladeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollerBladeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RollerBladeApp/Pods-RollerBladeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		68B4636E528F344D369692F8 /* Pods-RollerBladeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollerBladeApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RollerBladeApp/Pods-RollerBladeApp.release.xcconfig"; sourceTree = "<group>"; };
 		8000FCD21F37DA92009FE2B3 /* avatarPhoto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatarPhoto.jpg; sourceTree = "<group>"; };
 		8000FCD51F37DEA5009FE2B3 /* UIView+UIProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UIProperties.swift"; sourceTree = "<group>"; };
 		8000FCD81F37E3D7009FE2B3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -43,12 +47,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF189DC89AFC668A6DBDB6A /* Pods_RollerBladeApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DDAE45B406B68EC7A9833F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2461D8B02A557AA814E2EFF6 /* Pods-RollerBladeApp.debug.xcconfig */,
+				68B4636E528F344D369692F8 /* Pods-RollerBladeApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3D3CDF388BE4BE2B3789D5E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1825A8FBA9F55802F6C9FA81 /* Pods_RollerBladeApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8000FCD41F37DE98009FE2B3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +92,8 @@
 			children = (
 				803697DE1F0F1E9100C4A45D /* RollerBladeApp */,
 				803697DD1F0F1E9100C4A45D /* Products */,
+				1DDAE45B406B68EC7A9833F3 /* Pods */,
+				3D3CDF388BE4BE2B3789D5E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,9 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 803697EE1F0F1E9100C4A45D /* Build configuration list for PBXNativeTarget "RollerBladeApp" */;
 			buildPhases = (
+				5DD30208FB60630B12E0D346 /* [CP] Check Pods Manifest.lock */,
 				803697D81F0F1E9100C4A45D /* Sources */,
 				803697D91F0F1E9100C4A45D /* Frameworks */,
 				803697DA1F0F1E9100C4A45D /* Resources */,
+				9D0235A850E6214EF570D05D /* [CP] Embed Pods Frameworks */,
+				6D3EDEC625443EB72ACB0F43 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,6 +231,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DD30208FB60630B12E0D346 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6D3EDEC625443EB72ACB0F43 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RollerBladeApp/Pods-RollerBladeApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D0235A850E6214EF570D05D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RollerBladeApp/Pods-RollerBladeApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		803697D81F0F1E9100C4A45D /* Sources */ = {
@@ -337,6 +412,7 @@
 		};
 		803697EF1F0F1E9100C4A45D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2461D8B02A557AA814E2EFF6 /* Pods-RollerBladeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G9HUS8Z86V;
@@ -351,6 +427,7 @@
 		};
 		803697F01F0F1E9100C4A45D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68B4636E528F344D369692F8 /* Pods-RollerBladeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G9HUS8Z86V;
